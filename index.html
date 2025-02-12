@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أذكار المسلم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .azkar-box {
+            background: white;
+            padding: 20px;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #219150;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌙 أذكار المسلم 🌙</h1>
+    <div class="azkar-box">
+        <p id="zekr">اضغط على الزر لعرض ذكر عشوائي</p>
+        <button onclick="showZekr()">اذكر الله</button>
+    </div>
+
+    <script>
+        const azkarList = [
+            "سبحان الله وبحمده، سبحان الله العظيم",
+            "لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير",
+            "اللهم اجعلنا من الذاكرين الله كثيرًا والذاكرات",
+            "أستغفر الله العظيم وأتوب إليه",
+            "اللهم صل وسلم على نبينا محمد"
+        ];
+
+        function showZekr() {
+            let randomIndex = Math.floor(Math.random() * azkarList.length);
+            document.getElementById("zekr").innerText = azkarList[randomIndex];
+        }
+    </script>
+</body>
+</html>
